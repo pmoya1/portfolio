@@ -171,6 +171,14 @@ const fontStyles = squish(`
     font-display: swap;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: Orbitron;
+    font-weight: 700;
+    src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJMMIlzdpvHyQYGaCIkT_dybL9.woff2') format('woff2');
+    font-display: swap;
+    font-style: normal;
+  }
 `);
 
 export const themeStyles = squish(`

@@ -1,20 +1,25 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
+import sentinelTexture2Large from '~/assets/sentinel-2.png';
+import sentinelTexture2Placeholder from '~/assets/sentinel-2.png';
+import sentinelTexture2 from '~/assets/sentinel-2.png';
+import sentinelTextureLarge from '~/assets/sentinel-1.png';
+import sentinelTexturePlaceholder from '~/assets/sentinel-1.png';
+import sentinelTexture from '~/assets/sentinel-1.png';
+import bristolTextureLarge from '~/assets/bristol.png';
+import bristolTexturePlaceholder from '~/assets/bristol.png';
+import bristolTexture from '~/assets/bristol.png';
 import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
 import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+// FINI assets temporarily commented out - missing files
+// import finiTextureLarge from '~/assets/fini-screenshot-large.png';
+// import finiTexturePlaceholder from '~/assets/fini-screenshot-placeholder.png';
+// import finiTexture from '~/assets/fini-screenshot.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
 import { Profile } from './profile';
 import { ProjectSummary } from './project-summary';
+import { Extracurricular } from './extracurricular';
 import { useEffect, useRef, useState } from 'react';
 import config from '~/config.json';
 import styles from './home.module.css';
@@ -41,7 +46,7 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
+    title: 'Work',
     description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
   });
 };
@@ -53,10 +58,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -103,13 +109,13 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
+        title="FINI: The Future of Financial Education"
+        description="Empowering people to build financial confidence and healthy money habits through playful exploration."
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'FINI financial education platform',
           textures: [
             {
               srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
@@ -124,21 +130,21 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
+        title="Sentinel Global - Analyst"
+        description="Venture capital firm recently closed a $200M+ fund focused on deep tech, climate, and AI. Support investment team with startup sourcing, due diligence, and market research. Created multiple internal agentic systems leveraging LLMs to analyze public information and integrate data room scraping tools to streamline due diligence processes."
         buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="https://www.sentinelglobal.xyz/"
         model={{
           type: 'phone',
-          alt: 'App login screen',
+          alt: 'Sentinel Global website',
           textures: [
             {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
+              srcSet: `${sentinelTexture} 375w, ${sentinelTextureLarge} 750w`,
+              placeholder: sentinelTexturePlaceholder,
             },
             {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
+              srcSet: `${sentinelTexture2} 375w, ${sentinelTexture2Large} 750w`,
+              placeholder: sentinelTexture2Placeholder,
             },
           ],
         }}
@@ -148,20 +154,25 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="University of Bristol - BSc in Mathematics and Philosophy"
+        description="Third year undergraduate specializing in theoretical mathematics, metaphysics and philosophical theology."
+        buttonText="View course"
+        buttonLink="https://www.bristol.ac.uk/study/undergraduate/2026/maths/bsc-mathematics-and-philosophy/"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'University of Bristol Mathematics and Philosophy',
           textures: [
             {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
+              srcSet: `${bristolTexture} 800w, ${bristolTextureLarge} 1920w`,
+              placeholder: bristolTexturePlaceholder,
             },
           ],
         }}
+      />
+      <Extracurricular
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
       />
       <Profile
         sectionRef={details}

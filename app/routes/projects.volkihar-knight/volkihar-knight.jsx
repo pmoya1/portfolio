@@ -53,7 +53,7 @@ const description =
 const roles = ['3D Modelling', 'Texturing', 'Graphic Design'];
 
 export const meta = () => {
-  return baseMeta({ title, description, prefix: 'Projects' });
+  return baseMeta({ title, description, prefix: 'Work' });
 };
 
 export function VolkiharKnight() {

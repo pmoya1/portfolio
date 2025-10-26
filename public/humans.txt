@@ -8,9 +8,9 @@ and graphic assets behind this site humanstxt.org.
 
 _______________________________________________________________________________
 
-DESIGNER | デザイナー
+DESIGNER | Γεια σου, ξένε.
 
-Hamish Williams
+Pablo Moya-Angeler
 Hand crafted design & web development
 
 Design tools:
@@ -18,12 +18,13 @@ Figma
 Photoshop
 Blender
 
-twitter.com/hamishmw
-github.com/hamishmw
+pmoya123456@gmail.com
+github.com/pmoya
+linkedin.com/in/pablo-moya-angeler-lozano-366a06254
 
 _______________________________________________________________________________
 
-TECHNOLOGY | テクノロジー
+TECHNOLOGY | Καλωσόρισμα
 
 React
 Remix
@@ -32,7 +33,7 @@ Framer Motion
 
 _______________________________________________________________________________
 
-FONTS | フォント
+FONTS | Νικητής
 
 Gotham
 IPA Gothic Regular

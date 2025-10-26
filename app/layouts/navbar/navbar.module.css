@@ -123,6 +123,26 @@
     }
   }
 
+  .cvIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-size: var(--fontSizeBodyS);
+    font-weight: var(--fontWeightBold);
+    color: var(--textBody);
+    background: rgba(255, 255, 255, 1);
+    border-radius: 4px;
+    transition: background var(--durationM) var(--bezierFastoutSlowin),
+      color var(--durationM) var(--bezierFastoutSlowin);
+
+    :global([data-theme='dark']) & {
+      background: rgba(0, 0, 0, 1);
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
   .navIconLink {
     display: flex;
     align-items: center;

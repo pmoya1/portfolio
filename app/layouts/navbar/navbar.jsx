@@ -206,6 +206,15 @@ export const Navbar = () => {
 
 const NavbarIcons = ({ desktop }) => (
   <div className={styles.navIcons}>
+    <a
+      data-navbar-item={desktop || undefined}
+      className={styles.navIconLink}
+      aria-label="Download CV"
+      href="/cv.pdf"
+      download="Pablo Moya-Angeler - CV.pdf"
+    >
+      <div className={styles.cvIcon}>CV</div>
+    </a>
     {socialLinks.map(({ label, url, icon }) => (
       <a
         key={label}

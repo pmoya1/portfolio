@@ -46,7 +46,7 @@ const description =
 const roles = ['User Research', 'UX Design', 'Interface Design'];
 
 export const meta = () => {
-  return baseMeta({ title, description, prefix: 'Projects' });
+  return baseMeta({ title, description, prefix: 'Work' });
 };
 
 export const Slice = () => {
