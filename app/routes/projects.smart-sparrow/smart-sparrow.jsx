@@ -43,7 +43,8 @@ import imageSprStoryboarderDark from '~/assets/spr-storyboarder-dark.png';
 import imageSprStoryboarderLightLarge from '~/assets/spr-storyboarder-light-large.png';
 import imageSprStoryboarderLightPlaceholder from '~/assets/spr-storyboarder-light-placeholder.png';
 import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
-// FINI assets temporarily commented out - missing files
+import finiWebLanding from '~/assets/finiWebLanding.png';
+// FINI assets temporarily commented out - missing filesç
 // import finiTextureLarge from '~/assets/fini-screenshot-large.png';
 // import finiTexturePlaceholder from '~/assets/fini-screenshot-placeholder.png';
 // import finiTexture from '~/assets/fini-screenshot.png';
@@ -56,6 +57,7 @@ import imageSprStoryboarderLight from '~/assets/spr-storyboarder-light.png';
 // import userCentricityImageLarge from '~/assets/user-centricity-image-large.png';
 // import userCentricityImagePlaceholder from '~/assets/user-centricity-image-placeholder.png';
 // import userCentricityImage from '~/assets/user-centricity-image.png';
+import world1Image from '~/assets/World1.jpg';
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { Link } from '~/components/link';
@@ -123,6 +125,14 @@ export const SmartSparrow = () => {
         />
         <ProjectSection padding="top">
           <ProjectSectionContent>
+            <Image
+              key={theme}
+              src={finiWebLanding}
+              width={800}
+              height={500}
+              alt="FINI landing page"
+              sizes="90vw"
+            />
             {/* FINI image temporarily removed - missing assets */}
             {/* <ProjectImage
               raised
@@ -137,6 +147,7 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
+       
           <ProjectTextRow>
             <ProjectSectionHeading>The mission</ProjectSectionHeading>
             <ProjectSectionText>
@@ -149,16 +160,14 @@ export const SmartSparrow = () => {
         </ProjectSection>
         <ProjectSection light={isDark}>
           <ProjectSectionContent>
-            {/* FINI world image temporarily removed - missing assets */}
-            {/* <Image
+            <Image
               key={theme}
-              srcSet={`${world1Image} 1024w, ${world1ImageLarge} 2048w`}
+              src={world1Image}
               width={1024}
               height={800}
-              placeholder={world1ImagePlaceholder}
               alt="FINI World 1 showing Solar Systems and Worlds structure"
               sizes="100vw"
-            /> */}
+            />
             <ProjectTextRow>
               <SegmentedControl
                 currentIndex={themes.indexOf(theme)}
